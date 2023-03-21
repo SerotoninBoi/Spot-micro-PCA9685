@@ -1,13 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-@author: Arnaud Villeneuve
-
-This file contains the main program to run the Spotmicro Controller
-
-"""
- 
+"""this is a test message"""
 
 from time import sleep, time
 from math import pi, sin, cos, atan, atan2, sqrt
