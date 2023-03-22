@@ -580,34 +580,37 @@ while (continuer):
         # Define the angle offsets for each servo
         offsets = {
         leg1_servo1: -85,
-        leg1_servo2: -40,
-        leg1_servo3: 0,
-        leg2_servo1: 1,
+        leg1_servo2: 10,
+        leg1_servo3: -37,
+        leg2_servo1: -85,
         leg2_servo2: 1,
         leg2_servo3: 1,
-        leg3_servo1: 1,
-        leg3_servo2: 1,
-        leg3_servo3: 1,
-        leg4_servo1: 1,
+        leg3_servo1: -85,
+        leg3_servo2: 10,
+        leg3_servo3: -37,
+        leg4_servo1: -85,
         leg4_servo2: 1,
         leg4_servo3: 1,
         }
        
         
     
-
+        """Front Left Leg, Servos 0,1,2"""
         kit.servo[leg1_servo1].angle = (180 - (abs(thetalf[0])) * 180 / math.pi) + offsets[leg1_servo1]
-        kit.servo[leg1_servo2].angle = (180 - (abs(thetalf[1])) * 180 / math.pi) + offsets[leg1_servo2]
+        kit.servo[leg1_servo2].angle = ((abs(thetalf[1])) * 180 / math.pi) + offsets[leg1_servo2]
         kit.servo[leg1_servo3].angle = (180 - (abs(thetalf[2])) * 180 / math.pi) + offsets[leg1_servo3]
-        kit.servo[leg2_servo1].angle = abs(thetarf[0]) * 180 / math.pi
-        kit.servo[leg2_servo2].angle = abs(thetarf[1]) * 180 / math.pi
-        kit.servo[leg2_servo3].angle = abs(thetarf[2]) * 180 / math.pi
-        kit.servo[leg3_servo1].angle = abs(thetarr[0]) * 180 / math.pi
-        kit.servo[leg3_servo2].angle = abs(thetarr[1]) * 180 / math.pi
-        kit.servo[leg3_servo3].angle = abs(thetarr[2]) * 180 / math.pi
-        kit.servo[leg4_servo1].angle = abs(thetalr[0]) * 180 / math.pi
-        kit.servo[leg4_servo2].angle = abs(thetalr[1]) * 180 / math.pi
-        kit.servo[leg4_servo3].angle = abs(thetalr[2]) * 180 / math.pi
+        """Front Right Leg, Servos 3,4,5"""
+        kit.servo[leg2_servo1].angle = (abs(thetarf[0]) * 180 / math.pi) + offsets[leg2_servo1]
+        kit.servo[leg2_servo2].angle = (180 - abs(thetarf[1]) * 180 / math.pi) + offsets[leg2_servo2]
+        kit.servo[leg2_servo3].angle = (abs(thetarf[2]) * 180 / math.pi) + offsets[leg2_servo3]
+        """Rear Right Leg, Servos 6,7,8"""
+        kit.servo[leg3_servo1].angle = (180 - (abs(thetarr[0]) * 180 / math.pi)) + offsets[leg3_servo1]
+        kit.servo[leg3_servo2].angle = (abs(thetarr[1]) * 180 / math.pi) + offsets[leg3_servo2]
+        kit.servo[leg3_servo3].angle = (180 - (abs(thetarr[2]) * 180 / math.pi)) + offsets[leg3_servo3]
+        """Rear Left Leg, Servos 9,10,11"""
+        kit.servo[leg4_servo1].angle = (abs(thetalr[0]) * 180 / math.pi) + offsets[leg4_servo1]
+        kit.servo[leg4_servo2].angle = (180 - (abs(thetalr[1]) * 180 / math.pi)) + offsets[leg4_servo2]
+        kit.servo[leg4_servo3].angle = (abs(thetalr[2]) * 180 / math.pi) + offsets[leg4_servo3]
         print(kit.servo[leg1_servo1].angle)
         print(kit.servo[leg1_servo2].angle)
         print(kit.servo[leg1_servo3].angle)
