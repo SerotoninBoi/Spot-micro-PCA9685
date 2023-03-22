@@ -593,18 +593,18 @@ while (continuer):
         leg4_servo3: 1,
     }
 
-        kit.servo[leg1_servo1].angle = thetalf[0] * 180 / math.pi
-        kit.servo[leg1_servo2].angle = thetalf[1] * 180 / math.pi
-        kit.servo[leg1_servo3].angle = thetalf[2] * 180 / math.pi
-        kit.servo[leg2_servo1].angle = thetarf[0] * 180 / math.pi
-        kit.servo[leg2_servo2].angle = thetarf[1] * 180 / math.pi
-        kit.servo[leg2_servo3].angle = thetarf[2] * 180 / math.pi
-        kit.servo[leg3_servo1].angle = thetarr[0] * 180 / math.pi
-        kit.servo[leg3_servo2].angle = thetarr[1] * 180 / math.pi
-        kit.servo[leg3_servo3].angle = thetarr[2] * 180 / math.pi
-        kit.servo[leg4_servo1].angle = thetalr[0] * 180 / math.pi
-        kit.servo[leg4_servo2].angle = thetalr[1] * 180 / math.pi
-        kit.servo[leg4_servo3].angle = thetalr[2] * 180 / math.pi
+        kit.servo[leg1_servo1].angle = abs(thetalf[0]) * 180 / math.pi
+        kit.servo[leg1_servo2].angle = abs(thetalf[1]) * 180 / math.pi
+        kit.servo[leg1_servo3].angle = abs(thetalf[2]) * 180 / math.pi
+        kit.servo[leg2_servo1].angle = abs(thetarf[0]) * 180 / math.pi
+        kit.servo[leg2_servo2].angle = abs(thetarf[1]) * 180 / math.pi
+        kit.servo[leg2_servo3].angle = abs(thetarf[2]) * 180 / math.pi
+        kit.servo[leg3_servo1].angle = abs(thetarr[0]) * 180 / math.pi
+        kit.servo[leg3_servo2].angle = abs(thetarr[1]) * 180 / math.pi
+        kit.servo[leg3_servo3].angle = abs(thetarr[2]) * 180 / math.pi
+        kit.servo[leg4_servo1].angle = abs(thetalr[0]) * 180 / math.pi
+        kit.servo[leg4_servo2].angle = abs(thetalr[1]) * 180 / math.pi
+        kit.servo[leg4_servo3].angle = abs(thetalr[2]) * 180 / math.pi
 
         # Wait for the servos to move
         time.sleep(1)
