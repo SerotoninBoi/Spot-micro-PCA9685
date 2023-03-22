@@ -579,18 +579,18 @@ while (continuer):
 
         # Define the angle offsets for each servo
         offsets = {
-        leg1_servo1: 0,
-        leg1_servo2: 0,
-        leg1_servo3: 0,
-        leg2_servo1: 0,
-        leg2_servo2: 0,
-        leg2_servo3: 0,
-        leg3_servo1: 0,
-        leg3_servo2: 0,
-        leg3_servo3: 0,
-        leg4_servo1: 0,
-        leg4_servo2: 0,
-        leg4_servo3: 0,
+        leg1_servo1: 1,
+        leg1_servo2: 1,
+        leg1_servo3: 1,
+        leg2_servo1: 1,
+        leg2_servo2: 1,
+        leg2_servo3: 1,
+        leg3_servo1: 1,
+        leg3_servo2: 1,
+        leg3_servo3: 1,
+        leg4_servo1: 1,
+        leg4_servo2: 1,
+        leg4_servo3: 1,
     }
 
         kit.servo[leg1_servo1].angle = thetalf[0] * 180 / math.pi
