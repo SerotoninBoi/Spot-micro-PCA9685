@@ -591,7 +591,12 @@ while (continuer):
         leg4_servo1: 1,
         leg4_servo2: 1,
         leg4_servo3: 1,
-    }
+        }
+        # Reverse the direction of the servos on the left front leg
+        thetalf[0] = 180 - thetalf[0]
+        thetalf[1] = 180 - thetalf[1]
+        thetalf[2] = 180 - thetalf[2]
+    
 
         kit.servo[leg1_servo1].angle = abs(thetalf[0]) * 180 / math.pi
         kit.servo[leg1_servo2].angle = abs(thetalf[1]) * 180 / math.pi
