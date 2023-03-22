@@ -560,63 +560,63 @@ while (continuer):
 
 
         # Initialize the servo controller
-kit = ServoKit(channels=16)
+            kit = ServoKit(channels=16)
 
 # Set the frequency of the PWM signal (50Hz is typical for servos)
-kit.servo[0].set_pwm_freq(50)
+            kit.servo[0].set_pwm_freq(50)
 
 # Define the servo channels connected to each leg
-leg1_servo1 = 0
-leg1_servo2 = 1
-leg1_servo3 = 2
-leg2_servo1 = 3
-leg2_servo2 = 4
-leg2_servo3 = 5
-leg3_servo1 = 6
-leg3_servo2 = 7
-leg3_servo3 = 8
-leg4_servo1 = 9
-leg4_servo2 = 10
-leg4_servo3 = 11
+            leg1_servo1 = 0
+            leg1_servo2 = 1
+            leg1_servo3 = 2
+            leg2_servo1 = 3
+            leg2_servo2 = 4
+            leg2_servo3 = 5
+            leg3_servo1 = 6
+            leg3_servo2 = 7
+            leg3_servo3 = 8
+            leg4_servo1 = 9
+            leg4_servo2 = 10
+            leg4_servo3 = 11
 
-# Define the angle offsets for each servo
-offsets = {
-    leg1_servo1: 0,
-    leg1_servo2: 0,
-    leg1_servo3: 0,
-    leg2_servo1: 0,
-    leg2_servo2: 0,
-    leg2_servo3: 0,
-    leg3_servo1: 0,
-    leg3_servo2: 0,
-    leg3_servo3: 0,
-    leg4_servo1: 0,
-    leg4_servo2: 0,
-    leg4_servo3: 0,
-}
+            # Define the angle offsets for each servo
+            offsets = {
+                leg1_servo1: 0,
+                leg1_servo2: 0,
+                leg1_servo3: 0,
+                leg2_servo1: 0,
+                leg2_servo2: 0,
+                leg2_servo3: 0,
+                leg3_servo1: 0,
+                leg3_servo2: 0,
+                leg3_servo3: 0,
+                leg4_servo1: 0,
+                leg4_servo2: 0,
+                leg4_servo3: 0,
+            }
 
-# Get the servo angles for each leg
-thetalf = [angle * 180 / math.pi + offsets[leg1_servo1], angle * 180 / math.pi + offsets[leg1_servo2], angle * 180 / math.pi + offsets[leg1_servo3]]  # leg 1
-thetarf = [angle * 180 / math.pi + offsets[leg2_servo1], angle * 180 / math.pi + offsets[leg2_servo2], angle * 180 / math.pi + offsets[leg2_servo3]]  # leg 2
-thetarr = [angle * 180 / math.pi + offsets[leg3_servo1], angle * 180 / math.pi + offsets[leg3_servo2], angle * 180 / math.pi + offsets[leg3_servo3]]  # leg 3
-thetalr = [angle * 180 / math.pi + offsets[leg4_servo1], angle * 180 / math.pi + offsets[leg4_servo2], angle * 180 / math.pi + offsets[leg4_servo3]]  # leg 4
+            # Get the servo angles for each leg
+            thetalf = [angle * 180 / math.pi + offsets[leg1_servo1], angle * 180 / math.pi + offsets[leg1_servo2], angle * 180 / math.pi + offsets[leg1_servo3]]  # leg 1
+            thetarf = [angle * 180 / math.pi + offsets[leg2_servo1], angle * 180 / math.pi + offsets[leg2_servo2], angle * 180 / math.pi + offsets[leg2_servo3]]  # leg 2
+            thetarr = [angle * 180 / math.pi + offsets[leg3_servo1], angle * 180 / math.pi + offsets[leg3_servo2], angle * 180 / math.pi + offsets[leg3_servo3]]  # leg 3
+            thetalr = [angle * 180 / math.pi + offsets[leg4_servo1], angle * 180 / math.pi + offsets[leg4_servo2], angle * 180 / math.pi + offsets[leg4_servo3]]  # leg 4
 
-# Set the angles for each servo
-kit.servo[leg1_servo1].angle = thetalf[0]
-kit.servo[leg1_servo2].angle = thetalf[1]
-kit.servo[leg1_servo3].angle = thetalf[2]
-kit.servo[leg2_servo1].angle = thetarf[0]
-kit.servo[leg2_servo2].angle = thetarf[1]
-kit.servo[leg2_servo3].angle = thetarf[2]
-kit.servo[leg3_servo1].angle = thetarr[0]
-kit.servo[leg3_servo2].angle = thetarr[1]
-kit.servo[leg3_servo3].angle = thetarr[2]
-kit.servo[leg4_servo1].angle = thetalr[0]
-kit.servo[leg4_servo2].angle = thetalr[1]
-kit.servo[leg4_servo3].angle = thetalr[2]
+            # Set the angles for each servo
+            kit.servo[leg1_servo1].angle = thetalf[0]
+            kit.servo[leg1_servo2].angle = thetalf[1]
+            kit.servo[leg1_servo3].angle = thetalf[2]
+            kit.servo[leg2_servo1].angle = thetarf[0]
+            kit.servo[leg2_servo2].angle = thetarf[1]
+            kit.servo[leg2_servo3].angle = thetarf[2]
+            kit.servo[leg3_servo1].angle = thetarr[0]
+            kit.servo[leg3_servo2].angle = thetarr[1]
+            kit.servo[leg3_servo3].angle = thetarr[2]
+            kit.servo[leg4_servo1].angle = thetalr[0]
+            kit.servo[leg4_servo2].angle = thetalr[1]
+            kit.servo[leg4_servo3].angle = thetalr[2]
 
-# Wait for the servos to move
-time.sleep(1)
+            # Wait for the servos to move
+            time.sleep(1)
 
 
 
