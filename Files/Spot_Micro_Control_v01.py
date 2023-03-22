@@ -579,7 +579,7 @@ while (continuer):
 
         # Define the angle offsets for each servo
         offsets = {
-        leg1_servo1: 0,
+        leg1_servo1: -85,
         leg1_servo2: -40,
         leg1_servo3: 0,
         leg2_servo1: 1,
