@@ -611,8 +611,12 @@ kit.servo[leg2_servo3].angle = thetarf[2]
 kit.servo[leg3_servo1].angle = thetarr[0]
 kit.servo[leg3_servo2].angle = thetarr[1]
 kit.servo[leg3_servo3].angle = thetarr[2]
-kit.servo[
-        
+kit.servo[leg4_servo1].angle = thetalr[0]
+kit.servo[leg4_servo2].angle = thetalr[1]
+kit.servo[leg4_servo3].angle = thetalr[2]
+
+# Wait for the servos to move
+time.sleep(1)
 
 
 
