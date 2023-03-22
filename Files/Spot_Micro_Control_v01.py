@@ -582,15 +582,15 @@ while (continuer):
         leg1_servo1: -85,
         leg1_servo2: 10,
         leg1_servo3: -37,
-        leg2_servo1: -85,
-        leg2_servo2: 1,
-        leg2_servo3: 1,
+        leg2_servo1: 85,
+        leg2_servo2: -10,
+        leg2_servo3: 37,
         leg3_servo1: -85,
         leg3_servo2: 10,
         leg3_servo3: -37,
-        leg4_servo1: -85,
-        leg4_servo2: 1,
-        leg4_servo3: 1,
+        leg4_servo1: 85,
+        leg4_servo2: -10,
+        leg4_servo3: 37,
         }
        
         
