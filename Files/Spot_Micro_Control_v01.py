@@ -7,6 +7,7 @@ from time import sleep, time
 from math import pi, sin, cos, atan, atan2, sqrt
 import numpy as np
 from adafruit_servokit import ServoKit 
+import math
 
 import pygame
 pygame.init()
