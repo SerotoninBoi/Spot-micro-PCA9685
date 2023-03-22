@@ -559,9 +559,8 @@ while (continuer):
 
              # Initialize the servo controller
         kit = ServoKit(channels=16)
+        kit.frequency = 50
 
-                # Set the frequency of the PWM signal (50Hz is typical for servos)
-        kit.servo[0].set_pwm_freq(50)
 
                 # Define the servo channels connected to each leg
         leg1_servo1 = 0
