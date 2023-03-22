@@ -606,8 +606,7 @@ while (continuer):
         kit.servo[leg4_servo2].angle = abs(thetalr[1]) * 180 / math.pi
         kit.servo[leg4_servo3].angle = abs(thetalr[2]) * 180 / math.pi
 
-        # Wait for the servos to move
-        time.sleep(1)
+        
 
 
 
