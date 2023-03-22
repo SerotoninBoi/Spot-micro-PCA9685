@@ -6,6 +6,7 @@
 from time import sleep, time
 from math import pi, sin, cos, atan, atan2, sqrt
 import numpy as np
+from adafruit_servokit import ServoKit 
 
 import pygame
 pygame.init()
@@ -555,23 +556,65 @@ while (continuer):
         thetarf = Spot.IK(Spot.L0, Spot.L1, Spot.L2, Spot.d, pos[3], pos[4], pos[5], -1)[0]
         thetarr = Spot.IK(Spot.L0, Spot.L1, Spot.L2, Spot.d, pos[6], pos[7], pos[8], -1)[0]
         thetalr = Spot.IK(Spot.L0, Spot.L1, Spot.L2, Spot.d, pos[9], pos[10], pos[11], 1)[0]
+
+
+
+        # Initialize the servo controller
+kit = ServoKit(channels=16)
+
+# Set the frequency of the PWM signal (50Hz is typical for servos)
+kit.servo[0].set_pwm_freq(50)
+
+# Define the servo channels connected to each leg
+leg1_servo1 = 0
+leg1_servo2 = 1
+leg1_servo3 = 2
+leg2_servo1 = 3
+leg2_servo2 = 4
+leg2_servo3 = 5
+leg3_servo1 = 6
+leg3_servo2 = 7
+leg3_servo3 = 8
+leg4_servo1 = 9
+leg4_servo2 = 10
+leg4_servo3 = 11
+
+# Define the angle offsets for each servo
+offsets = {
+    leg1_servo1: 0,
+    leg1_servo2: 0,
+    leg1_servo3: 0,
+    leg2_servo1: 0,
+    leg2_servo2: 0,
+    leg2_servo3: 0,
+    leg3_servo1: 0,
+    leg3_servo2: 0,
+    leg3_servo3: 0,
+    leg4_servo1: 0,
+    leg4_servo2: 0,
+    leg4_servo3: 0,
+}
+
+# Get the servo angles for each leg
+thetalf = [angle * 180 / math.pi + offsets[leg1_servo1], angle * 180 / math.pi + offsets[leg1_servo2], angle * 180 / math.pi + offsets[leg1_servo3]]  # leg 1
+thetarf = [angle * 180 / math.pi + offsets[leg2_servo1], angle * 180 / math.pi + offsets[leg2_servo2], angle * 180 / math.pi + offsets[leg2_servo3]]  # leg 2
+thetarr = [angle * 180 / math.pi + offsets[leg3_servo1], angle * 180 / math.pi + offsets[leg3_servo2], angle * 180 / math.pi + offsets[leg3_servo3]]  # leg 3
+thetalr = [angle * 180 / math.pi + offsets[leg4_servo1], angle * 180 / math.pi + offsets[leg4_servo2], angle * 180 / math.pi + offsets[leg4_servo3]]  # leg 4
+
+# Set the angles for each servo
+kit.servo[leg1_servo1].angle = thetalf[0]
+kit.servo[leg1_servo2].angle = thetalf[1]
+kit.servo[leg1_servo3].angle = thetalf[2]
+kit.servo[leg2_servo1].angle = thetarf[0]
+kit.servo[leg2_servo2].angle = thetarf[1]
+kit.servo[leg2_servo3].angle = thetarf[2]
+kit.servo[leg3_servo1].angle = thetarr[0]
+kit.servo[leg3_servo2].angle = thetarr[1]
+kit.servo[leg3_servo3].angle = thetarr[2]
+kit.servo[
         
-        """
-        ************************************************************************************************
-        
-        thetalf, thetarf, thetarr, thetalr are the sets of angles thant can be sent to the servos 
-        to generate the motion of Spotmicro
-        
-        This is where you can place the call to the servo moving function
-        Moving function depends on the type of servos and drivers that are used to control them 
-        -I2c shields, PWM generators
-        -Servos maximum race 180°, 270°, 360°...
-           
-        Servos zero positions and races must be tuned 
-        
-        ************************************************************************************************ 
-        """
-        
+
+
 
  
         stance = [False, False, False, False]
