@@ -581,7 +581,7 @@ while (continuer):
         offsets = {
         leg1_servo1: 1,
         leg1_servo2: 1,
-        leg1_servo3: 1,
+        leg1_servo3: 90,
         leg2_servo1: 1,
         leg2_servo2: 1,
         leg2_servo3: 1,
