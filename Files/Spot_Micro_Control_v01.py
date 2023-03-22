@@ -607,7 +607,7 @@ while (continuer):
         kit.servo[leg4_servo3].angle = abs(thetalr[2]) * 180 / math.pi
         print(abs(thetalf[0]) * 180 / math.pi)
         print(abs(thetalf[1]) * 180 / math.pi)
-        print(angle = abs(thetalf[2]) * 180 / math.pi)
+        print(abs(thetalf[2]) * 180 / math.pi)
 
         
 
