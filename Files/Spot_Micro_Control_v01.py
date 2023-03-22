@@ -12,7 +12,7 @@ import math
 import pygame
 pygame.init()
 screen = pygame.display.set_mode((600, 600)) 
-pygame.display.set_caption("SPOTMICRO")
+pygame.display.set_caption("SpotMicro Viewer")
 
 
 import Spotmicro_Inverse_Kinematics_and_Position_Library_v01
